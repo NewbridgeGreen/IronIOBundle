@@ -25,7 +25,7 @@ class HawkboxIronIOExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        if ($config['enabled']) {
+        /*if ($config['enabled']) {
             // Required constructor args
             $options = array(
                 'token'      => $config['token'],
@@ -47,6 +47,6 @@ class HawkboxIronIOExtension extends Extension
             }
 
             $container->setDefinition('code_meme_iron_mq.messagequeue', $definition);
-        }
+        } */
     }
 }
