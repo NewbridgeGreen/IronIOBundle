@@ -1,6 +1,6 @@
 <?php
 
-namespace Hawkbox\Bundle\IronWorkerBundle\DependencyInjection;
+namespace Hawkbox\Bundle\IronIOBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

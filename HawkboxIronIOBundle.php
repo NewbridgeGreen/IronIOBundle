@@ -1,9 +1,9 @@
 <?php
 
-namespace Hawkbox\Bundle\IronWorkerBundle;
+namespace Hawkbox\Bundle\IronIOBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class HawkboxIronWorkerBundle extends Bundle
+class HawkboxIronIOBundle extends Bundle
 {
 }

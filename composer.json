@@ -1,5 +1,5 @@
 {
-    "name":         "hawkbox/ironio-bundle",
+    "name":         "hawkbox/iron-io-bundle",
     "type":         "symfony-bundle",
     "description":  "Symfony2 bundle wrapping IronIO PHP bindings",
     "keywords":     ["ironio","ironmq","ironworker","ironcache","message","queue"],

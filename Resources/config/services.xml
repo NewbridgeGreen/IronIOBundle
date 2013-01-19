@@ -11,10 +11,6 @@
     </parameters>
 
     <services>
-        <service id="iron_io.worker" class="%iron_io.worker.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
-        </service>
+        <service id="iron_io.worker" class="%iron_io.worker.class%"></service>
     </services>
 </container>
