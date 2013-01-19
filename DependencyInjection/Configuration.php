@@ -20,32 +20,9 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('hawkbox_iron_io')
             ->children()
-                ->booleanNode('enabled')->isRequired()->end()
-
                 ->scalarNode('token')->isRequired()->cannotBeEmpty()->end()
-                ->scalarNode('project_id')->isRequired()->cannotBeEmpty()->end()
-
-                ->arrayNode('api')
-                    ->children()
-                        ->scalarNode('protocol')->cannotBeEmpty()->end()
-                        ->scalarNode('host')->cannotBeEmpty()->end()
-                        ->scalarNode('port')->cannotBeEmpty()->end()
-                        ->scalarNode('api_version')->cannotBeEmpty()->end()
-                    ->end()
-                ->end()
-
-                ->arrayNode('options')
-                    ->children()
-                        ->scalarNode('max_retries')->cannotBeEmpty()->end()
-                        ->booleanNode('debug_enabled')->end()
-                        ->booleanNode('ssl_verifypeer')->end()
-                        ->scalarNode('connection_timeout')->cannotBeEmpty()->end()
-                    ->end()
-                ->end()
+                ->scalarNode('project')->isRequired()->cannotBeEmpty()->end()
             ->end();
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
 
         return $treeBuilder;
     }
