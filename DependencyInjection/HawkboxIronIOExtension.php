@@ -25,28 +25,8 @@ class HawkboxIronIOExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        /*if ($config['enabled']) {
-            // Required constructor args
-            $options = array(
-                'token'      => $config['token'],
-                'project_id' => $config['project_id'],
-            );
+        $container->setParameter('hawkbox_iron_io.token', $config['token']);
+        $container->setParameter('hawkbox_iron_io.project', $config['project']);
 
-            // Copy optional constructor args from 'api' node
-            if (isset($config['api'])) {
-                $options = array_merge($options, $config['api']);
-            }
-
-            $definition = new Definition('IronMQ', array($options));
-
-            // Set public properties from 'options' node
-            if (isset($config['options'])) {
-                foreach ($config['options'] as $key => $value) {
-                    $definition->setProperty($key, $value);
-                }
-            }
-
-            $container->setDefinition('code_meme_iron_mq.messagequeue', $definition);
-        } */
     }
 }

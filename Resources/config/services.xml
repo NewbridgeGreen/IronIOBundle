@@ -5,12 +5,17 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="iron_io.worker.class">IronMq</parameter>
-        <parameter key="iron_io.worker.class">IronWorker</parameter>
-        <parameter key="iron_io.worker.class">IronCache</parameter>
+        <parameter key="hawkbox_iron_io.worker.class">IronMq</parameter>
+        <parameter key="hawkbox_iron_io.worker.class">IronWorker</parameter>
+        <parameter key="hawkbox_iron_io.worker.class">IronCache</parameter>
     </parameters>
 
     <services>
-        <service id="iron_io.worker" class="%iron_io.worker.class%"></service>
+        <service id="hawkbox_iron_io.worker" class="%hawkbox_iron_io.worker.class%">
+            <argument type="collection">
+                <argument key="token">%hawkbox_iron_io.config.token%</argument>
+                <argument key="project">%hawkbox_iron_io.config.project%</argument>
+            </argument>
+        </service>
     </services>
 </container>
